@@ -1,0 +1,99 @@
+<body class="c-body">
+<div class="menu">
+    <h1 class="title">Super Snake 3000</h1>
+    <ul>
+    <li  class="button button--start" id="start" onclick=send()>Start </li>
+    <form action="index.html" class="radio radio--difficulty" id="settings" method="GET">
+        Map Difficulty
+        <br><input type="radio" name="diff" value="Easy" > Easy
+        <input type="radio" name="diff" value="Medium" checked> Medium
+        <input type="radio" name="diff" value="Hard"> Hard
+
+        <br>Snake Speed
+        <br><input type="radio" name="speed" value="Easy"> Easy
+        <input type="radio" name="speed" value="Medium" checked> Medium
+        <input type="radio" name="speed" value="Hard"> Hard
+
+    </form>
+    </ul>
+    <p id="demo"></p>
+</div>
+</body>
+
+<style>
+    .c-body {
+    color: white;
+    background: grey;
+    }
+    .title {
+    margin: 30px auto;
+    text-align: center;
+    text-shadow: ttl-shadow 0 0 20px;
+    }
+    .button {
+    list-style: none;
+    width: 250px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    position: absolute;
+    left: calc(50% - 125px);
+    border: 1px solid red-900;
+    background-color: red-500;
+    font-size: 24px;
+    text-shadow: txt-shadow 2px 2px 2px;
+    cursor: pointer;     
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 2px solid;
+    outline-color: rgba(255, 255, 255, .6);
+    }
+    .radio {
+    list-style: none;
+    width: 250px;
+    height: 200px;
+    line-height: 48px;
+    text-align: center;
+    position: absolute;
+    left: calc(50% - 125px);
+    border: 1px solid red-900;
+    background-color: red-500;
+    font-size: 18px;
+    text-shadow: txt-shadow 2px 2px 2px;
+    cursor: pointer;
+    
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 2px solid;
+    outline-color: rgba(255, 255, 255, .6);
+    
+    /*&:hover {
+        box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, 1);
+        outline-color: rgba(255, 255, 255, 0);
+        outline-offset: 25px;
+        text-shadow: txt-shadow-hover 1px 1px 2px;
+    }*/
+
+    }
+    .button--scores {
+    top: 150px;
+    }
+    .radio--speed {
+    top: 250px;
+    }
+    .radio--difficulty {
+    top: 150px;
+    }
+    .button--start {
+    top: 400px;
+    }
+
+</style>
+
+<script>
+
+function send() {
+  document.getElementById("settings").submit();
+  
+}
+
+</script>
+

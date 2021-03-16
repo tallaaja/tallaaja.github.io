@@ -1,0 +1,76 @@
+<body class="c-body">
+    <div class="menu">
+        <h1 class="title">Scores</h1>
+        <button onclick="window.location.href='game.html'" class="button">Menu</button>
+        <ul>
+            <li class="score"></li>
+        </ul>
+    </div>
+</body>
+    
+<style>
+    .c-body {
+    color: white;
+    background: grey;
+    }
+    .title {
+    margin: 30px auto;
+    text-align: center;
+    text-shadow: ttl-shadow 0 0 20px;
+    } 
+    .button {
+    list-style: none;
+    width: 250px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    position: absolute;
+    left: calc(50% - 125px);
+    border: 1px solid red-900;
+    background-color: red-500;
+    font-size: 24px;
+    text-shadow: txt-shadow 2px 2px 2px;
+    cursor: pointer;
+    
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 2px solid;
+    outline-color: rgba(255, 255, 255, .6);
+    }
+
+    .score {
+    top: 200px;
+    list-style: none;
+    width: 250px;
+    height: 48px;
+
+    text-align: center;
+    position: absolute;
+    left: calc(50% - 125px);
+
+    background-color: red-500;
+    font-size: 18px;
+    text-shadow: txt-shadow 2px 2px 2px;    
+
+
+    }
+    
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+        $.getJSON("scores.json", function(result){
+            console.log(result);
+          $.each(result, function(i, field){
+                $("li").append('<p>' + ( i + 1 ) + ": " + field.name + ": " + field.score + "pts  " + '</p>');               
+            
+          });
+        });
+
+    });
+    </script>
+
+
+    
+    
