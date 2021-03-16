@@ -1229,9 +1229,9 @@ window.onload = function() {
         context2.drawImage(bloodImage,20,0);
         context2.fillStyle = "white";
         context2.textAlign = "center";
-        context2.font = "24px Verdana";
+        context2.font = "22px Verdana";
         
-        context2.fillText("Press any key to start! OR Hold esc to go back to main menu", canvas2.width/2, canvas2.height/2); 
+        context2.fillText("Press any key to start! OR Hold esc to go main menu", canvas2.width/2, canvas2.height/2); 
     } 
 
     function starEffect(){
