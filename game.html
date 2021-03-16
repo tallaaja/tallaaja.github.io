@@ -8,7 +8,10 @@
 </head>
 <body>
 <canvas id="viewport" width="640" height="480"></canvas>
-<div>
+<canvas id="foreground" width="640" height="560"></canvas>
+<canvas id="stareffect" width="640" height="560"></canvas>
+
+<div id ="score-div">
 <h1 id="score">Score: 0</h1>
 <h1 id="highscore">Highscore: 0</h1>
 </div>
@@ -18,7 +21,18 @@
       width: 510px;
       border: 15px solid green;
       padding: 50px;
+      position: relative;
+      left: 0px;
+      top: 480px;
     }
+    canvas {
+    position: absolute;
+    
+
+    
+    border-radius: 10px;
+}
+
     </style>
 
 
