@@ -1,5 +1,11 @@
 window.onload = function() {
 
+    //
+    //
+    //
+    //
+    //Main mechanics from https://rembound.com/articles/creating-a-snake-game-tutorial-with-html5
+
 
     var levelArray = new Array(20);
     for (var i=0; i<levelArray.length; i++) {
